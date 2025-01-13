@@ -3,8 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <h1>Guia git- github</h1>
+    <main>
+        <section class="principal">
+            <h2>Git</h2>
+            <p><b>git = </b>Controle de versionamento.</p>
+            <p><b>gitbash = </b>Suporte do software gitbash no CMD.</p>
+            <article>
+                <h3>Configuração gitbash no CMD</h3>
+                <p><b>--global user.name"nome" = </b>Nome do usuário no github</p>
+                <p><b>--global user.email"email" = </b>Email do usuário no github.</p>
+                <p><b>git config --global --list = </b>verificar dados do gitbash.</p>
+            </article>
+            <section class="secundaria">
+                <h3>Comando básicos CMD Gitbash</h3>
+                <p><b></b>ctrk + l = </b> Limpar.</p>
+                <p><b>ls = </b>Listar.</p>
+                <p><b>cd = </b>Mudar repositório.</p>
+                <p><b>cd .. = </b>Voltar ao repositório anterior.</p>
+                <p><b>touch = </b>Criar novo arquivo.</p>
+                <p><b>mkdir = </b>Criar novo repositório.</p>
+                <p><b>rm = </b>Remover arquivo.</p>
+                <p><b>rm -rf = </b>Remover pasta sem alerta de segurança (contém risco).</p>
+                <p><b>mv = </b>Modver repositório para outra pasta.</p>
+                <aside>Caso esteja na mesma pasta, apenas muda o nome do repositório. </aside>
+                <p><b>git status = </b>Analisa em qual estágio do commit o documento esta.</p>
+                <p><b>commit = </b>Cria um marco histórico a partir de qualquer alteração no código. Cada commit é rastreado por um ID que pode ser visitado ou até mesmo revertido possibilitando navegação entre diversas versões do seu código ao passar do tempo.</p>
+                <article>   
+                    <h4>Estágios do commit:</h4>
+                    <p><b>MODFIED = </b>A partir que o codigo foi alterado entra no modo MODIFIED.</p>
+                    <p><b>STAGING = </b>Quando o documento estiver pronto para ser commitado.</p>
+                    <p><b>COMMITED = </b>Ariquivos enviados ao servidor .git.</p>
+                </article>
+                <p><b>git add. = </b> Altera TODOS o documento ao status STAGING.</p>
+                <p><b>git add "nome do repositório" = </b>adicione o repositório específico ao modo STAGING.</p>
+                <p><b>git rm --cached "mone do repositório" = </b> Retorna o diretório ao status  MODIFIED.</p>
+                <p><b>git commit -m"mensagem" = </b>Commita os documentos ao servidor local git, adicionando uma descrição no commit.</p>
+                <p><b>git log = </b>Analisa o históricode informações de commites do repositório.</p>
+                <p><b>git log --oneline = </b>Históricode commites de forma compactada.</p>
+                <h4>Revertendo commites.</h4>
+                <p><b>chekout = </b>Forma mais segura de navegar pelos commites passados, possibilitando analisar as alterações feitas, ou até mesmo criar uma nova "branch"  a partir do ID do commite sugerido.</p>
+                <aside> 
+                    <p>O "Head" do documento será remetente ao ID sugerido.</p>
+                    <p>para voltar a linha temporal atual usar o comando <b>git checkout "nome da branch"</b></p>
+                </aside>
+                <p><b>revert = </b>A partir do ID do commite sugerido, possibilita alterações do documento e do histórico, criando uma novo commite com seu próprio ID, revertendo parte do conteúdo do histórico.</p>
+                <aside>Altera somente modificações do ID sugerido, sendo assim, não compromete os proximos commites, exibindo o histórico do REVERT.</aside>
+                <p><b>reset = </b>Reverte o "HEAD" do documento ao ID especificado. (deleta os commites adiante).</p>
+                <aside><p>Há possibilidade de resgatar alterações ao voltar no ID específico, porém o histórico dos commites adiante serão deletados. Para voltar ao ID sem alterações, basta usar o comando <br><b>git reset --hard</b>.</p></aside>
+                <h4>Branch</h4>
+                <p>diverge da linha principal de desenvolvimento e continua a trabalhar sem alterar o código Main, acaba com "pastas" com nome de diferentes versões do mesmo projeto, traz a segurança com o versionamento, além de otimizar o tempo quando trabalhado em grandes Features.</p>
+                <p><b>git branch = </b>Lista se há branch no repositório.</p>
+                <aside> O operador <b>*</b> identifica em qual branch estamos trabalhando.</aside>
+                <p><b>git checkout "nome da branch" = </b>Cria uma nova branch, porém não a executa.</p>
+                <p><b>git checkout -b "nome da branch" = </b>cria uma nova branch e executa em um comando.</p>
+                <aside>
+                    <p>Quando se trata de branch, o comando checkout tem a função escolher em qual branch iremos trabalhar. <br><b>git checkout (TAB) =</b> lista todas branch's presente no projeto.</p>
+                </aside>
+                <p><b>git branch -d "nome da branch" = </b>Deletar branch.</p>
+                <aside>
+                    <p>Observações de erros ao deletar branchs:</p>
+                    <ul>
+                        <li>não deve haver commites em andamento.</li>
+                        <li>antes de deletar é necessário dar merge com a branch Main.</li>
+                    </ul>
+                <p>Caso deseja ignorar todos estes processos antes de deletar a branch, digite o comando <b>git branch -D "name branch"</b><br>(perderá qualquer alteração feita na branch selecionada). </p>
+                </aside>
+                <h5>Branch merge</h5>
+                <p>Forma de mesclar o conteúdo de um branch (cópia) com a branch (master).</p>
+                <p><b>git branch merge "nome da branch" = </b>Mesclando conteúdo da branch principal.</p>
+                <aside>
+                    <p>Obs.: para mesclar as branch's é necessário estarmos na branch de destino.</p>
+                    <p><b>estudar 'Fast-forward' e 'Recursive' (timeline do HEAD do projeto)</b></p>
+                </aside>
+            </section>
+        </section>
+    
+        <section class="principal">
+            <h2>Github</h2>
+            <p><b>Github = </b>rede social de programadores que lhe permite trabalhar com git.</p>
+
+        </section>
+    </main>
+    
 </body>
 </html>
