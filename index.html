@@ -85,8 +85,58 @@
     
         <section class="principal">
             <h2>Github</h2>
-            <p><b>Github = </b>rede social de programadores que lhe permite trabalhar com git.</p>
-
+            <p><b>Github = </b> É uma plataforma de hospedagem REMOTA de código-fonte e arquivos com controle de versionamento usando o Git.</p>
+            <p><b>SSH = </b>Chave de segurança que valida o acesso e a gravação do código fonte no servidor remoto do github.</p>
+            <aside>
+                <p>É necessário validar e configurar sua chave SSH para ter acesso aos documentos remotos no github e também para publicar seus códigos na plataforma.</p>
+            </aside>
+            <p><b>abreviando SSH = </b> Para obtermos a chave SSH do projeto é necessário navegar pelo repositório de interesse no github, isso podeser um trabalho desgastante que demandará tempo. Portanto há possibilidade de abreviar tal chave no terminal do git bash para que toda vez que for publicar no github (push), no local do ID do SSH substituirmos pela palavra chave origin.</p>
+            <article>
+                <p>Abreviar o ID do SSH:</p>
+                <p><b>git remote add origin "ID do SSH do diretório sugerido"</b></p>
+                <p>verificar se o ID do SSH está funcionando: <b>git remote -v</b></p>
+            </article>
+            <p><b>git push "ID do SSH" = </b>Publicar documento no github.</p>
+            <h3>Clonar repositório</h3>
+            <p>Ao criar um repositório no GitHub, ele existirá como um repositório remoto. É possível clonar o repositório para criar uma cópia local no seu computador e sincronizar entre os dois locais. Caso não tenha o repositório desejado no servidor local(seu computador), é necessário fazer a clonagem do repositório remoto(github).</p>
+            <p><b>git clone "ID do repositório desejado = "</b>Comando para clonar o repositório remoto no servidor local.</p>
+            <aside>
+                <p>Observar em qual pasta o repositório será clonado.<br>quando o repositório remoto é clonado, o ID do SSH já está abreviado (origin).</p>
+            </aside>
+            <h3>Pull Request</h3>
+            <p>pull request no GitHub é uma maneira de sugerir alterações em um projeto de código aberto ou colaborativo. Essas alterações são propostas em um branch, que garante que o branch-padrão só contenha trabalho concluído e aprovado.</p>
+            <h3>Fork</h3>
+            <p>É um novo repositório que compartilha configurações de código e visibilidade com o repositório "upstream" original, ou seja, é uma forma de propor uma contribuição a um repositório existente.</p>
+            <article>
+                <h4>fazendo um Fork</h4>
+                <ul>
+                    <li>Primeiro, você precisa fazer um fork do repositório que deseja contribuir. Isso cria uma cópia do repositório na sua conta do GitHub.</li>
+                    <li>Em seguida, clone o repositório forkado para sua máquina local.</li>
+                    <li>Crie uma nova branch para suas alterações.</li>
+                    <li>Trabalhe nas alterações que deseja fazer no código ou nos arquivos do projeto.</li>
+                    <li>commite suas alterações.</li>
+                    <li>Volte para o GitHub, vá até a sua branch e clique em "Pull Request" para enviar suas alterações para o repositório original.</li>
+                </ul>
+                <p>Após concluir alterações no repositório forkado, solicite sua contribuição ao autor do projeto original através do pull request.</p>
+                <p>Caso sua contribuição seja satisfeita o criador do projeto poderá mesclar seu fork com seu branch principal.</p>
+            </article>
+            <h3>Readme.md</h3>
+            <p>É um arquivo fundamental para qualquer repositório no GitHub, pois oferece informações importantes sobre o projeto.</p>
+            <article>
+              <h4>como estruturar um arquivo readme.md:</h4>
+              <ul>
+                <li>Nome do projeto</li>
+                <li>Descrição = Uma breve descrição do que o projeto faz, a motivação por trás e quais tecnologias foram utilizadas.</li>
+                <li>Instalação = Instruções sobre como instalar , configurar o ambiente de desenvolvimento e pré-requisitos.</li>
+                <li>Instrução de uso = informar o usuário onde e como vai rodar o projeto.</li>
+                <li>licenças =  orientações e permissões da forma como o usuário pode utilizar seu código.</li>
+                <li>contribuição=  informa aos desenvolvedores sobre o que carece o projeto e o que pode ser contribuído e os códigos de conduta.</li>
+                <li>contribuidores = reconhecimento aos contribuidores e facilita a comunicação entre os desenvolvedores que participaram do projeto.</li>
+              </ul>  
+            </article>
+            <aside>
+                <p><b>*pesquisar sobre templates de Readme para usar de base. <br>Para desenvolvedores front-end pode usar o Readme de forma mais criativa, utilizando links para visitar o site, gifs, prints do site para despertar curiosidade do usuário etc...</b></p>
+            </aside>
         </section>
     </main>
     
